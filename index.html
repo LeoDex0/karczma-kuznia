@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Karczma Kuźnia — kuchnia regionalna w Beskidach</title>
+<meta name="description" content="Karczma Kuźnia — prawdziwa kuchnia beskidzka: kwaśnica, rolada śląska, placek po zbójnicku. Rezerwacja stolika: +48 500 123 456.">
+<link rel="canonical" href="https://karczma-kuznia.vercel.app/">
+<meta property="og:title" content="Karczma Kuźnia — Beskidy">
+<meta property="og:description" content="Prawdziwa kuchnia beskidzka u podnóża gór. Rezerwuj stolik.">
+<meta property="og:type" content="restaurant">
+<meta property="og:url" content="https://karczma-kuznia.vercel.app/">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:image" content="https://karczma-kuznia.vercel.app/images/hero.jpg">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:alt" content="Wnętrze Karczmy Kuźnia — drewniane belki, ciepłe światło, otwarta kuchnia">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Karczma Kuźnia — Beskidy">
+<meta name="twitter:description" content="Prawdziwa kuchnia beskidzka u podnóża gór. Rezerwuj stolik.">
+<meta name="twitter:image" content="https://karczma-kuznia.vercel.app/images/hero.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M9 5 C4 9 4 20 10 26 M23 5 C28 9 28 20 22 26' fill='none' stroke='%23a9803f' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Karczma Kuźnia",
+  "image": "https://karczma-kuznia.vercel.app/images/hero.jpg",
+  "url": "https://karczma-kuznia.vercel.app/",
+  "telephone": "+48500123456",
+  "servesCuisine": ["Polish", "Silesian"],
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "ul. Kowalska 7",
+    "addressLocality": "Beskid Śląski",
+    "addressCountry": "PL"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "10:00",
+      "closes": "21:00"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "740"
+  }
+}
+</script>
+</head>
+<body>
+
+<!-- reusable icon marks -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <path id="shoe" d="M5.4 20.4 A 8.3 8.3 0 1 1 18.6 20.4" />
+    <path id="wa" d="M4 4h16v12H8l-4 4V4Z" />
+  </defs>
+</svg>
+
+<header class="site-header" id="header">
+  <a href="#top" class="brand" aria-label="Karczma Kuźnia — początek strony">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><use class="shoe" href="#shoe"/></svg>
+    <b>Karczma&nbsp;Kuźnia</b>
+  </a>
+  <nav aria-label="Nawigacja">
+    <ul class="nav-links">
+      <li><a href="#historia" data-i18n="nav.karczma">Karczma</a></li>
+      <li><a href="#karta" data-i18n="nav.karta">Karta</a></li>
+      <li><a href="#atmosfera" data-i18n="nav.wnetrze">Wnętrze</a></li>
+      <li><a href="#dojazd" data-i18n="nav.dojazd">Dojazd</a></li>
+    </ul>
+  </nav>
+  <div class="header-actions">
+    <div class="lang-switch" role="group" aria-label="Język strony / Choose language">
+      <button type="button" class="lang-btn is-active" data-lang="pl">PL</button>
+      <button type="button" class="lang-btn" data-lang="en">EN</button>
+      <button type="button" class="lang-btn" data-lang="cs">CZ</button>
+      <button type="button" class="lang-btn" data-lang="de">DE</button>
+    </div>
+    <a class="btn" href="#rezerwacja" data-i18n="nav.rezerwuj">Rezerwuj</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="hero">
+    <img class="hero__img" src="images/hero.jpg" alt="Wnętrze Karczmy Kuźnia — drewniane belki, ciepłe światło, otwarta kuchnia" fetchpriority="high">
+    <div class="wrap">
+      <p class="hero__kicker" data-i18n="hero.kicker">Beskid Śląski &nbsp;·&nbsp; od 1987 &nbsp;·&nbsp; nad potokiem</p>
+      <h1><span data-i18n="hero.h1.1">Kuchnia</span><br><span data-i18n="hero.h1.2">beskidzka</span><span class="light" data-i18n="hero.h1.3">bez skrótów</span></h1>
+      <p class="hero__sub" data-i18n="hero.sub">Kwaśnica na wędzonce, rolada z kluskami, placek po zbójnicku. Gotujemy to, czym karmiły tu babcie — w dawnej wiejskiej kuźni, dwa kroki od szlaku.</p>
+      <div class="hero__cta">
+        <a class="btn" href="tel:+48500123456" data-i18n="hero.cta1">Zadzwoń i zarezerwuj</a>
+        <a class="btn btn--ghost" href="#karta" data-i18n="hero.cta2">Zobacz kartę</a>
+        <a class="btn btn--ghost js-whatsapp" href="https://wa.me/48500123456" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use class="wa-icon" href="#wa"/></svg>
+          WhatsApp
+        </a>
+      </div>
+      <div class="hero__meta">
+        <span><b>4,8&nbsp;★</b> &nbsp;740 <span data-i18n="hero.meta.reviews">opinii Google</span></span>
+        <span><b data-i18n="hero.meta.everyday">Codziennie</b> &nbsp;10:00–21:00</span>
+        <span><b>ul. Kowalska 7</b></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HISTORIA ============ -->
+  <section class="section section--oat story" id="historia">
+    <svg class="story__watermark" viewBox="0 0 24 24" aria-hidden="true"><use class="shoe" href="#shoe"/></svg>
+    <div class="wrap">
+      <div class="story__grid">
+        <div class="story__body reveal">
+          <p class="eyebrow" data-i18n="historia.eyebrow">Nasza karczma</p>
+          <h2 class="section-title" data-i18n="historia.title">Kuźnia — na szczęście i&nbsp;na sytość</h2>
+          <p data-i18n="historia.p1">Stoimy w starej kuźni na skraju wsi, tam gdzie dolina kończy się, a szlak zaczyna piąć się w górę. Dużym rondlom i wolnemu gotowaniu jesteśmy wierni od lat — bez mrożonek, bez proszków, bez pośpiechu.</p>
+          <p data-i18n="historia.p2">Kwaśnicę gotujemy na własnej wędzonce. Kluski śląskie kręcimy rano. Placki ziemniaczane trafiają na patelnię dopiero, gdy usiądziecie przy stole.</p>
+          <ul class="creed">
+            <li data-i18n="historia.creed1">Kuchnia regionalna — śląska i&nbsp;góralska, taka jak trzeba.</li>
+            <li data-i18n="historia.creed2">Porcje, po których nie zamawia się deseru z&nbsp;rozpędu.</li>
+            <li data-i18n="historia.creed3">Miejsce na chrzciny, urodziny i&nbsp;niedzielny obiad całą rodziną.</li>
+          </ul>
+        </div>
+        <figure class="story__figure reveal">
+          <img src="images/handmade.jpg" alt="Ręcznie lepione pierogi ułożone rzędami na stolnicy">
+          <figcaption data-i18n="historia.figcaption">Pierogi — lepione co rano</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ KARTA ============ -->
+  <section class="section section--dark" id="karta">
+    <div class="wrap">
+      <div class="menu__head reveal">
+        <div>
+          <p class="eyebrow" data-i18n="karta.eyebrow">Z pieca, z patelni, z&nbsp;rondla</p>
+          <h2 class="section-title" data-i18n="karta.title">Karta</h2>
+        </div>
+        <p class="menu__note" data-i18n="karta.note">Fragment karty. Pełne menu i&nbsp;aktualne ceny ustalimy razem z&nbsp;Wami.</p>
+      </div>
+
+      <div class="rule" aria-hidden="true"><svg viewBox="0 0 24 24"><use class="shoe" href="#shoe"/></svg></div>
+
+      <div class="menu__cats reveal">
+
+        <div class="cat">
+          <h3><span data-i18n="cat.zupy">Zupy</span> <span data-i18n="cat.zupy.sub">/ na rozgrzewkę</span></h3>
+          <div class="dish">
+            <span class="dish__name"><span data-i18n="dish.kwasnica.name">Kwaśnica na wędzonce</span>
+              <svg class="flag" viewBox="0 0 24 24" aria-label="danie firmowe"><use class="shoe" href="#shoe"/></svg>
+              <span class="dish__desc" data-i18n="dish.kwasnica.desc">Kwaśna kapusta, żeberko wędzone, ziemniak</span>
+            </span>
+            <span class="dish__price">24 zł</span>
+          </div>
+          <div class="dish">
+            <span class="dish__name"><span data-i18n="dish.zurek.name">Żurek w chlebie</span>
+              <span class="dish__desc" data-i18n="dish.zurek.desc">Na zakwasie żytnim, biała kiełbasa, jajko</span>
+            </span>
+            <span class="dish__price">26 zł</span>
+          </div>
+          <div class="dish">
+            <span class="dish__name"><span data-i18n="dish.rosol.name">Rosół z domowym makaronem</span>
+              <span class="dish__desc" data-i18n="dish.rosol.desc">Gotowany na trzech mięsach</span>
+            </span>
+            <span class="dish__price">16 zł</span>
+          </div>
+          <div class="dish">
+            <span class="dish__name"><span data-i18n="dish.flaczki.name">Flaczki po beskidzku</span>
+              <span class="dish__desc" data-i18n="dish.flaczki.desc">Z majerankiem i pieprzem, na ostro</span>
+            </span>
+            <span class="dish__price">22 zł</span>
+          </div>
+        </div>
+
+        <div class="cat">
+          <h3><span data-i18n="cat.dania">Dania główne</span> <span data-i18n="cat.dania.sub">/ prosto z ognia</span></h3>
+          <div class="dish">
+            <span class="dish__name"><span data-i18n="dish.rolada.name">Rolada śląska z kluskami i modrą kapustą</span>
+              <svg class="flag" viewBox="0 0 24 24" aria-label="danie firmowe"><use class="shoe" href="#shoe"/></svg>
+              <span class="dish__desc" data-i18n="dish.rolada.desc">Wołowina, boczek, ogórek, ciemny sos</span>
+            </span>
+            <span class="dish__price">48 zł</span>
+          </div>
+          <div class="dish">
+            <span class="dish__name"><span data-i18n="dish.zbojnicki.name">Placek po zbójnicku</span>
+              <svg class="flag" viewBox="0 0 24 24" aria-label="danie firmowe"><use class="shoe" href="#shoe"/></svg>
+              <span class="dish__desc" data-i18n="dish.zbojnicki.desc">Gulasz wieprzowy na placku ziemniaczanym, kwaśna śmietana</span>
+            </span>
+            <span class="dish__price">46 zł</span>
+          </div>
+          <div class="dish">
+            <span class="dish__name"><span data-i18n="dish.golonka.name">Golonka pieczona w piwie</span>
+              <span class="dish__desc" data-i18n="dish.golonka.desc">Kapusta zasmażana, chrzan, musztarda</span>
+            </span>
+            <span class="dish__price">54 zł</span>
+          </div>
+          <div class="dish">
+            <span class="dish__name"><span data-i18n="dish.pstrag.name">Pstrąg z pieca</span>
+              <span class="dish__desc" data-i18n="dish.pstrag.desc">Masło, ziemniaki, surówka z kiszonej kapusty</span>
+            </span>
+            <span class="dish__price">49 zł</span>
+          </div>
+          <div class="dish">
+            <span class="dish__name"><span data-i18n="dish.pierogi.name">Pierogi — ruskie, z mięsem lub z kapustą i grzybami</span>
+              <span class="dish__desc" data-i18n="dish.pierogi.desc">8 sztuk, okraszone słoniną</span>
+            </span>
+            <span class="dish__price">32 zł</span>
+          </div>
+        </div>
+
+        <div class="cat">
+          <h3><span data-i18n="cat.placki">Placki ziemniaczane</span> <span data-i18n="cat.placki.sub">/ z patelni</span></h3>
+          <div class="dish">
+            <span class="dish__name"><span data-i18n="dish.wegierski.name">Placek po węgiersku</span>
+              <span class="dish__desc" data-i18n="dish.wegierski.desc">Gulasz wołowy, papryka, śmietana</span>
+            </span>
+            <span class="dish__price">42 zł</span>
+          </div>
+          <div class="dish">
+            <span class="dish__name"><span data-i18n="dish.jelen.name">Placek z gulaszem z jelenia</span>
+              <span class="dish__desc" data-i18n="dish.jelen.desc">Sezonowo, z leśnych ostępów</span>
+            </span>
+            <span class="dish__price">48 zł</span>
+          </div>
+          <div class="dish">
+            <span class="dish__name"><span data-i18n="dish.smietana.name">Placek ze śmietaną i cukrem</span>
+              <span class="dish__desc" data-i18n="dish.smietana.desc">Tak jak u babci</span>
+            </span>
+            <span class="dish__price">24 zł</span>
+          </div>
+        </div>
+
+        <div class="cat">
+          <h3><span data-i18n="cat.slodko">Na słodko</span> <span data-i18n="cat.slodko.sub">/ jeśli zostało miejsce</span></h3>
+          <div class="dish">
+            <span class="dish__name"><span data-i18n="dish.szarlotka.name">Szarlotka na ciepło</span>
+              <span class="dish__desc" data-i18n="dish.szarlotka.desc">Z gałką lodów śmietankowych</span>
+            </span>
+            <span class="dish__price">19 zł</span>
+          </div>
+          <div class="dish">
+            <span class="dish__name"><span data-i18n="dish.sernik.name">Sernik wiejski</span>
+              <span class="dish__desc" data-i18n="dish.sernik.desc">Pieczony, na kruchym spodzie</span>
+            </span>
+            <span class="dish__price">17 zł</span>
+          </div>
+          <div class="dish">
+            <span class="dish__name"><span data-i18n="dish.dnia.name">Ciasto dnia</span>
+              <span class="dish__desc" data-i18n="dish.dnia.desc">Zapytaj kelnera, co dziś upiekliśmy</span>
+            </span>
+            <span class="dish__price">15 zł</span>
+          </div>
+        </div>
+
+      </div>
+
+      <p class="menu__legend">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use class="shoe" href="#shoe"/></svg>
+        <span data-i18n="karta.legend">— danie firmowe Kuźni</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ GALERIA ============ -->
+  <section class="gallery" aria-label="Galeria dań">
+    <div class="wrap" style="padding-bottom:2rem">
+      <p class="eyebrow" style="color:var(--brass-lit)" data-i18n="gallery.eyebrow">Z naszego stołu</p>
+      <h2 class="section-title" style="color:var(--cream)" data-i18n="gallery.title">Co dziś pachnie z&nbsp;kuchni</h2>
+    </div>
+    <div class="gallery__track">
+      <figure><img src="images/kwasnica.jpg" alt="Kwaśnica podana z pieczywem" loading="lazy"><figcaption data-i18n="dish.kwasnica.name">Kwaśnica na wędzonce</figcaption></figure>
+      <figure><img src="images/rolada.jpg" alt="Rolada śląska z kluskami i modrą kapustą" loading="lazy"><figcaption data-i18n="gallery.cap.rolada">Rolada śląska</figcaption></figure>
+      <figure><img src="images/golonka.jpg" alt="Golonka pieczona w piwie podana z piwem" loading="lazy"><figcaption data-i18n="gallery.cap.golonka">Golonka w piwie</figcaption></figure>
+      <figure><img src="images/bigos.jpg" alt="Bigos myśliwski w żeliwnej patelni" loading="lazy"><figcaption data-i18n="gallery.cap.bigos">Bigos myśliwski</figcaption></figure>
+      <figure><img src="images/pierogi.jpg" alt="Pierogi okraszone słoniną i szczypiorkiem" loading="lazy"><figcaption data-i18n="gallery.cap.pierogi">Pierogi lepione ręcznie</figcaption></figure>
+      <figure><img src="images/szarlotka.jpg" alt="Szarlotka z kratką z ciasta i świeżymi jabłkami" loading="lazy"><figcaption data-i18n="dish.szarlotka.name">Szarlotka na ciepło</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- ============ ATMOSFERA ============ -->
+  <section class="section section--oat" id="atmosfera">
+    <div class="wrap">
+      <div class="atmo__grid">
+        <figure class="atmo__figure reveal">
+          <img src="images/kominek.jpg" alt="Kamienny kominek z ogniem w sali Karczmy Kuźnia">
+        </figure>
+        <div class="reveal">
+          <p class="eyebrow" data-i18n="atmosfera.eyebrow">Wnętrze</p>
+          <h2 class="section-title" data-i18n="atmosfera.title">Drewno, kamień i&nbsp;ogień</h2>
+          <p data-i18n="atmosfera.p1">Sala pachnie żywicą i&nbsp;dymem z&nbsp;kominka. Ciężkie stoły, ławy pod oknem, sień z&nbsp;wieszakami na kożuchy. Latem ogród od strony rzeki, zimą miejsce najbliżej ognia.</p>
+          <p data-i18n="atmosfera.p2">Mamy salę na większe spotkania — komunie, chrzciny, urodziny, stypy. Ustalamy menu, dekorację i&nbsp;godziny pod Wasze przyjęcie.</p>
+          <a class="btn btn--ink" href="tel:+48500123456" style="margin-top:1rem" data-i18n="atmosfera.cta">Zapytaj o salę na przyjęcie</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OPINIE ============ -->
+  <section class="section section--dark" aria-label="Opinie gości">
+    <div class="wrap">
+      <p class="eyebrow" data-i18n="opinie.eyebrow">Goście mówią</p>
+      <h2 class="section-title">4,8&nbsp;★ &nbsp;<span data-i18n="opinie.title.suffix">z&nbsp;740 opinii w&nbsp;Google</span></h2>
+      <div class="rule" aria-hidden="true"><svg viewBox="0 0 24 24"><use class="shoe" href="#shoe"/></svg></div>
+      <div class="quotes reveal">
+        <blockquote class="quote">
+          <div class="quote__stars" aria-hidden="true">★★★★★</div>
+          <p>Porcje ogromne, kwaśnica jak u&nbsp;babci, obsługa szybka i&nbsp;miła. Wracamy za&nbsp;każdym pobytem w&nbsp;Beskidach.</p>
+          <cite>Anna K. · opinia Google</cite>
+        </blockquote>
+        <blockquote class="quote">
+          <div class="quote__stars" aria-hidden="true">★★★★★</div>
+          <p>Placki ziemniaczane i&nbsp;golonka na medal. Klimat prawdziwej góralskiej karczmy, a&nbsp;nie sieciówki.</p>
+          <cite>Paweł J. · opinia Google</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DOJAZD ============ -->
+  <section class="section location" id="dojazd">
+    <img class="location__img" src="images/gory.jpg" alt="Mgła nad zalesionymi grzbietami Beskidu Śląskiego">
+    <div class="wrap">
+      <div class="location__card reveal">
+        <p class="eyebrow" data-i18n="dojazd.eyebrow">Dojazd i godziny</p>
+        <h2 class="section-title" style="max-width:none" data-i18n="dojazd.title">Znajdź nas</h2>
+        <div class="contact-line">
+          <svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          ul. Kowalska 7, Beskid Śląski
+        </div>
+        <div class="contact-line">
+          <svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>
+          <a href="tel:+48500123456">+48 500 123 456</a>
+        </div>
+        <p class="parking-note" data-i18n="dojazd.parking">Bezpłatny parking dla gości karczmy tuż przy wejściu (ok. 15 miejsc).</p>
+
+        <div class="map-embed">
+          <iframe title="Karczma Kuźnia na mapie Google" src="https://www.google.com/maps?q=Beskid%20%C5%9Al%C4%85ski&z=10&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <table class="hours">
+          <tbody>
+            <tr data-day="1"><th data-i18n="day.mon">Poniedziałek</th><td>10:00–21:00</td></tr>
+            <tr data-day="2"><th data-i18n="day.tue">Wtorek</th><td>10:00–21:00</td></tr>
+            <tr data-day="3"><th data-i18n="day.wed">Środa</th><td>10:00–21:00</td></tr>
+            <tr data-day="4"><th data-i18n="day.thu">Czwartek</th><td>10:00–21:00</td></tr>
+            <tr data-day="5"><th data-i18n="day.fri">Piątek</th><td>10:00–21:00</td></tr>
+            <tr data-day="6"><th data-i18n="day.sat">Sobota</th><td>10:00–21:00</td></tr>
+            <tr data-day="0"><th data-i18n="day.sun">Niedziela</th><td>10:00–21:00</td></tr>
+          </tbody>
+        </table>
+
+        <div style="display:flex;gap:0.75rem;flex-wrap:wrap">
+          <a class="btn" href="https://www.google.com/maps/search/Beskid+%C5%9Al%C4%85ski" target="_blank" rel="noopener" data-i18n="dojazd.cta">Wyznacz trasę</a>
+          <a class="btn btn--ghost js-whatsapp" href="https://wa.me/48500123456" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><use class="wa-icon" href="#wa"/></svg>
+            WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REZERWACJA ============ -->
+  <section class="section section--oat" id="rezerwacja">
+    <div class="wrap">
+      <div class="reserve__grid">
+        <div class="reveal">
+          <p class="eyebrow" data-i18n="rezerwacja.eyebrow">Rezerwacja</p>
+          <h2 class="section-title" data-i18n="rezerwacja.title">Zarezerwuj stolik</h2>
+          <p class="section-lead" data-i18n="rezerwacja.lead">Najszybciej — telefonicznie. Grupy powyżej 8 osób i&nbsp;przyjęcia prosimy zgłaszać z&nbsp;wyprzedzeniem.</p>
+          <div style="display:flex;gap:0.75rem;flex-wrap:wrap;margin-top:1rem">
+            <a class="btn btn--ink" href="tel:+48500123456">+48 500 123 456</a>
+            <a class="btn btn--ink js-whatsapp" href="https://wa.me/48500123456" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use class="wa-icon" href="#wa"/></svg>
+              WhatsApp
+            </a>
+          </div>
+        </div>
+        <form class="reveal" id="reserveForm" novalidate>
+          <div class="form-cols">
+            <div class="form-row">
+              <label for="rf-name" data-i18n="form.name">Imię i nazwisko</label>
+              <input type="text" id="rf-name" name="name" autocomplete="name" required>
+            </div>
+            <div class="form-row">
+              <label for="rf-phone" data-i18n="form.phone">Telefon</label>
+              <input type="tel" id="rf-phone" name="phone" autocomplete="tel" required>
+            </div>
+          </div>
+          <div class="form-cols">
+            <div class="form-row">
+              <label for="rf-date" data-i18n="form.date">Data i godzina</label>
+              <input type="text" id="rf-date" name="date" data-i18n-placeholder="form.date.placeholder" placeholder="np. sobota 18:00" required>
+            </div>
+            <div class="form-row">
+              <label for="rf-people" data-i18n="form.people">Liczba osób</label>
+              <input type="number" id="rf-people" name="people" min="1" max="40" value="2" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <label for="rf-note" data-i18n="form.note">Uwagi (opcjonalnie)</label>
+            <textarea id="rf-note" name="note" rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn btn--ink" data-i18n="form.submit">Wyślij prośbę o rezerwację</button>
+          <p id="rf-msg" role="status" style="font-family:var(--ff-mono);font-size:0.8rem;margin-top:0.75rem;color:var(--ink-soft)"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__brand">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use class="shoe" href="#shoe"/></svg>
+          <b>Karczma Kuźnia</b>
+        </div>
+        <p style="max-width:32ch" data-i18n="footer.tagline">Kuchnia regionalna Beskidu Śląskiego. U&nbsp;podnóża gór, nad potokiem.</p>
+      </div>
+      <div class="footer">
+        <h4 data-i18n="footer.contact.h4">Kontakt</h4>
+        <p><a href="tel:+48500123456">+48 500 123 456</a></p>
+        <p>
+          <a class="js-whatsapp" href="https://wa.me/48500123456" target="_blank" rel="noopener" data-i18n="whatsapp.cta">Napisz na WhatsApp</a>
+        </p>
+        <p>ul. Kowalska 7<br>Beskid Śląski</p>
+      </div>
+      <div class="footer">
+        <h4 data-i18n="footer.hours.h4">Godziny</h4>
+        <p><span data-i18n="hero.meta.everyday">Codziennie</span><br>10:00 – 21:00</p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 Karczma Kuźnia</span>
+      <span>Website by <a href="https://leodex.dev" target="_blank" rel="noopener">LeoDex</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="i18n.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
